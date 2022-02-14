@@ -2,8 +2,6 @@ import { jsonData } from "./jsonData.js";
 
 const data = JSON.parse(jsonData);
 
-console.log(data);
-
 getTable(data);
 
 function getTable(incData) {
@@ -18,7 +16,7 @@ function getTable(incData) {
             tableRowEntry = document.createElement('tr');
             tableRowEntry.innerHTML = `
                 <td class="row__cell">${data[key].name}</td>
-                <td class="row__cell ${getClassColor(data[key].color.value)}" >${data[key].color.name}</td>
+                <td class="row__cell ${getClassColor(data[key].color.value)}">${data[key].color.name}</td>
                 <td class="row__cell">${data[key].sizes[k].name}</td>
                 <td class="row__cell--right">${data[key].sizes[k].available}</td>
                 <td class="row__cell">${data[key].sizes[k].price}</td>
@@ -28,4 +26,27 @@ function getTable(incData) {
     }
 }
 
+function getClassColor(colorCode) {
+	//Функция возвращает наименование CSS-класса в зависимости от кода цвета.
+	
+		let color;
+		switch(colorCode) {
+			case '#FF004D':
+				color = 'row__cell--red';
+				break;
+			case '#008365':
+				color = 'row__cell--green';
+				break;
+			case '#3B5998':
+				color = 'row__cell--blue';
+				break;
+			case '#4C1A2C':
+				color = 'row__cell--marsala';
+				break;
+			default:
+				color = '';
+		}
+	
+		return color;
+	}
 
