@@ -1,0 +1,9 @@
+.idea
+.vscode
+work_files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+/desktop.ini

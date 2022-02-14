@@ -1,0 +1,27 @@
+.table  {
+    border-collapse: collapse;
+}
+
+.row__cell--red   {
+    background-color: #FF004D;
+}
+
+.row__cell--green   {
+    background-color: #008365;
+}
+
+.row__cell--blue   {
+    background-color: #3B5998;
+}
+
+.row__cell--marsala  {
+    background-color: #4C1A2C;
+}
+
+.row__cell--left    {
+    text-align: left;
+}
+
+.row__cell--right {
+    text-align: right;
+}
