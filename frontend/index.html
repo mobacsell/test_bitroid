@@ -8,16 +8,30 @@
     <title>frontend test</title>
 </head>
 <body>
-    <form class="form-filter">
-        <h1 class="form-filter__header">Фильтрация данных:</h1>
-        <label class="form-filter__input">Название товара: <input type="text" class="input-filter" autofocus></label>
-        <label class="form-filter__input">Цвет: <input type="text" class="input-filter"></label>
-        <label class="form-filter__input">Размер: <input type="text" class="input-filter"></label>
-        <label class="form-filter__input">Количество: <input type="text" class="input-filter"></label>
-        <label class="form-filter__input">Цена: <input type="text" class="input-filter"></label>
-        <button class="btn-filter--apply">Фильтр</button>
-        <button class="btn-filter--reset">Сброс фильтра</button>
-    </form>
+    <div class="wrapper">
+        <form class="form-filter">
+            <h1 class="form-filter__header">Фильтрация данных:</h1>
+            <label class="form-filter__input">Название товара: <input type="text" class="input-filter" autofocus></label>
+            <label class="form-filter__input">Цвет: <input type="text" class="input-filter"></label>
+            <label class="form-filter__input">Размер: <input type="text" class="input-filter"></label>
+            <label class="form-filter__input">Количество: <input type="text" class="input-filter"></label>
+            <label class="form-filter__input">Цена: <input type="text" class="input-filter"></label>
+            <button class="btn-filter--apply">Фильтр</button>
+            <button class="btn-filter--reset">Сброс фильтра</button>
+        </form>
+        <form class="form-sort">
+            <h1 class="form-sort__header">Сортировка данных:</h1>
+            <select name="select" class="form-sort__select">
+                <option value="name" selected>Название товара</option>
+                <option value="color">Цвет</option>
+                <option value="size">Размер</option>
+                <option value="available">Количество</option>
+                <option value="price">Цена</option>
+            </select>
+            <button class="btn-sort--apply">Сортировка</button>
+            <button class="btn-sort--reset">Сброс сортировки</button>
+        </form>
+    </div>
     <table border="1" class="table">
     </table>
     <script src="js/script.js" type="module"></script> 
