@@ -7,6 +7,7 @@ const   inputFilter = document.querySelectorAll('.input-filter'),
         btnFilterReset = document.querySelector('.btn-filter--reset'),
         btnSortApply = document.querySelector('.btn-sort--apply'),
         btnSortReset = document.querySelector('.btn-sort--reset'),
+        linkDiagram = document.querySelector('.link-diagram'),
         priority = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'];
 
 btnFilterApply.addEventListener('click', (event) => {
@@ -30,6 +31,8 @@ btnSortReset.addEventListener('click', (event) => {
 });
 
 getTable(data);
+
+getDiagram(data);
 
 function getTable(incData) {
 //Функция формирует таблицу на основе входящих данных с JSON-объекта.
@@ -190,5 +193,4 @@ function comparation(value1, value2) {
     const priority2 = priority.indexOf(value2);
     return priority1 > priority2;
 } 
-
 
